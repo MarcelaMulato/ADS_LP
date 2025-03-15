@@ -98,24 +98,19 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      start(( Início )) --> n1[\ Digite o número 1\]
-      n1 --> n2[\ Digite o número 2 \]
-      n2 --> n3[\ Digite o número 3\]
-      n3 --> maior{ n1 > n2 \n e \n n1 > n3 }
-      maior --> |Sim| A[/ n1 é o maior número /]
-      maior --> |Não| maior2{ n2 > n1 \n e \n n2 > n3 }
-      maior2 --> |Sim| B[/ n2 é o maior número/]
-      maior2 --> |Não| maior3{ n3 > n1 \n e \n n3 > n2 }
-      maior3 --> |Sim| C[/ n3 é o maior número /]
-      maior3 --> |Não| igual{ n1 = n2}
-      igual --> |Sim| D[/ O primeiro e o segundo número são iguais/]
-      igual --> |Não| igual2{ n1 = n3}
-      igual2 --> |Sim| E[/ O primeiro e o terceiro número são iguais/]
-      igual2 --> |Não| igual3{ n2 = n3}
-      igual3 --> |Sim| F[/ O segundo e o terceiro número são iguais/]
-      igual3 --> |Não| G[/ Todos os números são iguais/]
+      start(( Início )) --> input[\ Digite n1 \]
+      input --> inpu[\ Digite n2 \]
+      inpu --> inp[\ Digite n3 \]
+      inp --> teste{ n1 % n2 == 0 \n E \n n2 % n3 == 0?}
+      teste --> |Sim| A[/ Os três números são iguais /]
+      teste --> |Não| test2{ n1 > n2 ? }
+      test2 --> |Sim| test4{ n1 > n3 ? }
+      test4 --> |Sim| C[/ n1 é o maior número /]
+      test4 --> |Não| D[/ n3 é o maior número /]
+      test2 --> |Não| test5{ n2 > n3 ? }
+      test5 --> |Sim| E[/ n2 é o maior /]
+      test5 --> |Não| F[/ n3 é o maior/]
       A --> finish([ Fim ])
-      B --> finish
       C --> finish
       D --> finish
       E --> finish
@@ -126,10 +121,14 @@ Para mais informações acesse [Aula 01: Fluxogramas.](https://www.notion.so/cai
    
    ```mermaid
    flowchart TD
-      start(( Início )) --> n1[\ Digite o número 1\]
-      n1 --> fatorial[ fatorial = n1! ]
-      fatorial --> resultado[/ Resultado /]
-      resultado --> finish([ Fim ])
+        start(( Início )) --> input[\ Digite um número \]
+        input --> fat[ r = 1 ]
+        fat --> verification{ n > 1 ?}
+        verification --> |Sim| A[ r = r * n ]
+        A --> C[ n = n - 1]
+        C --> verification
+        verification --> |Não| B[/ Resposta = r /]
+        B --> finish([ Fim ])
    ```
    
 9. Elabore um fluxograma para verificar se um número digitado pelo usuário é par.
