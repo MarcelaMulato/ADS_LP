@@ -12,7 +12,7 @@ public class Main {
         System.out.println("Digite o coeficiente b: ");
         b = in.nextDouble();
 
-        result = b / a;
+        result = - b / a;
         System.out.println("O x da equação é " + result);
     }
 }
