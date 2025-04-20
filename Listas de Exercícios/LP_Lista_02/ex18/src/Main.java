@@ -12,7 +12,11 @@ public class Main {
         System.out.println("Digite o coeficiente b: ");
         b = in.nextDouble();
 
-        result = - b / a;
-        System.out.println("O x da equação é " + result);
+        if(a!= 0 && b!= 0) {
+            result = - b / a;
+            System.out.println("O resultado é " + result);
+        } else {
+            System.out.println("A equação não é do primeiro grau");
+        }
     }
 }
