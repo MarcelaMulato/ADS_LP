@@ -23,7 +23,7 @@ public class Main {
         int ds2 = matriz[2][1] * matriz[1][2] * matriz[0][0];
         int ds3 = matriz[2][2] * matriz[1][0] * matriz[0][1];
 
-        //determinante seguindo
+        //determinante
         int det = 0;
         det = -(ds1 + ds2 + ds3) + (dp1 + dp2 + dp3);
 
