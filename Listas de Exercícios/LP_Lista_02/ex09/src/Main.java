@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         double dist, result;
 
-        System.out.println("Digite a uma medida em km: ");
+        System.out.println("Digite uma medida em km: ");
         Scanner in = new Scanner(System.in); //Configura o scanner
         dist = in.nextDouble();
 

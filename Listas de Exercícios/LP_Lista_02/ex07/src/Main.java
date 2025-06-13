@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         double mm, result;
 
-        System.out.println("Digite a uma medida em milímetro: ");
+        System.out.println("Digite uma medida em milímetro: ");
         Scanner in = new Scanner(System.in); //Configura o scanner
         mm = in.nextDouble();
 

@@ -16,7 +16,7 @@ public class Main {
             result = - b / a;
             System.out.println("O resultado é " + result);
         } else {
-            System.out.println("A equação não é do primeiro grau");
+            System.out.println("A equação não é do primeiro grau!");
         }
     }
 }

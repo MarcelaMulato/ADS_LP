@@ -15,6 +15,6 @@ public class Main {
         soma = (-x1) + (-x2);
         produto = (-x1) * (-x2);
 
-        System.out.println("A equação do segundo grau é: x² " + soma + "x + " + produto + " = 0");
+        System.out.println("A equação do segundo grau é: x² " + soma + "x + " + produto + " = 0.");
     }
 }
