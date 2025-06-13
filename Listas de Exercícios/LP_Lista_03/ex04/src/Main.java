@@ -16,9 +16,9 @@ public class Main {
         n2 = in.nextDouble();
 
         media = (n1+n2)/2;
+        System.out.println("Sua média é " + media);
 
         if (media >= 50) {
-            System.out.println("Sua média é " + media);
             System.out.println("Aprovado!");
         } else {
             double n3, media2;
